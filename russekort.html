@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russekortgenerator</title>
+    <!--Her bruker vi CSS for a lage selve firekanten for russekortet og endrer litt pa storrelsen av tekst -->
+   <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #russekort {
+            width: 300px;
+            height: 300px; 
+            background-color: #FFD700; 
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        #russekort h2 {
+            margin: 0;
+        }
+        input[type="text"], select {
+            width: 200px;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #russekortImage {
+            width: 50px;
+            height: 50px;
+        }
+        #russekortForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #russekortForm > * {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="russekort">
+        <h2>Russekort</h2>
+        <p id="name"></p>
+        <p id="school"></p>
+        <p id="phone"></p> 
+        <p id="address"></p> 
+        <img id="russekortImage" src="" alt="Russekortbilde">
+    </div>
+
+    <form id="russekortForm">
+        <input type="text" id="nameInput" placeholder="Navn">
+        <select id="schoolSelect" name="skole">
+            <option value="Asker videregående skole">Asker videregående skole</option>
+            <option value="Askim videregående skole">Askim videregående skole</option>
+            <option value="Bjertnes videregående skole">Bjertnes videregående skole</option>
+            <option value="Bjørkelangen videregående skole">Bjørkelangen videregående skole</option>
+            <option value="Bleiker videregående skole">Bleiker videregående skole</option>
+            <option value="Borg videregående skole">Borg videregående skole</option>
+            <option value="Buskerud videregående skole">Buskerud videregående skole</option>
+            <option value="Drammen videregående skole">Drammen videregående skole</option>
+            <option value="Drømtorp videregående skole">Drømtorp videregående skole</option>
+            <option value="Dønski videregående skole">Dønski videregående skole</option>
+            <option value="Eidsvoll videregående skole">Eidsvoll videregående skole</option>
+            <option value="Eikeli videregående skole">Eikeli videregående skole</option>
+            <option value="Eiker videregående skole">Eiker videregående skole</option>
+            <option value="Frederik II videregående skole">Frederik II videregående skole</option>
+            <option value="Frogn videregående skole">Frogn videregående skole</option>
+            <option value="Glemmen videregående skole">Glemmen videregående skole</option>
+            <option value="Gol vidaregåande skule">Gol vidaregåande skule</option>
+            <option value="Greåker videregående skole">Greåker videregående skole</option>
+            <option value="Halden videregående skole">Halden videregående skole</option>
+            <option value="Holmen videregående skole">Holmen videregående skole</option>
+            <option value="Hvam videregående skole">Hvam videregående skole</option>
+            <option value="Hønefoss videregående skole">Hønefoss videregående skole</option>
+            <option value="Jessheim videregående skole">Jessheim videregående skole</option>
+            <option value="Kalnes videregående skole">Kalnes videregående skole</option>
+            <option value="Kirkeparken videregående skole">Kirkeparken videregående skole</option>
+            <option value="Kjelle videregående skole">Kjelle videregående skole</option>
+            <option value="Kongsberg videregående skole">Kongsberg videregående skole</option>
+            <option value="Lier videregående skole">Lier videregående skole</option>
+            <option value="Lillestrøm videregående skole">Lillestrøm videregående skole</option>
+            <option value="Lørenskog videregående skole">Lørenskog videregående skole</option>
+            <option value="Mailand videregående skole">Mailand videregående skole</option>
+            <option value="Malakoff videregående skole">Malakoff videregående skole</option>
+            <option value="Mysen videregående skole">Mysen videregående skole</option>
+            <option value="Nadderud videregående skole">Nadderud videregående skole</option>
+            <option value="Nannestad videregående skole">Nannestad videregående skole</option>
+            <option value="Nes videregående skole">Nes videregående skole</option>
+            <option value="Nesbru videregående skole">Nesbru videregående skole</option>
+            <option value="Nesodden videregående skole">Nesodden videregående skole</option>
+            <option value="Numedal videregående skole">Numedal videregående skole</option>
+            <option value="Ringerike videregående skole">Ringerike videregående skole</option>
+            <option value="Roald Amundsen videregående skole">Roald Amundsen videregående skole</option>
+            <option value="Rosenvilde videregående skole">Rosenvilde videregående skole</option>
+            <option value="Rud videregående skole">Rud videregående skole</option>
+            <option value="Rælingen videregående skole">Rælingen videregående skole</option>
+            <option value="Røyken videregående skole">Røyken videregående skole</option>
+            <option value="Sandvika videregående skole">Sandvika videregående skole</option>
+            <option value="Skedsmo videregående skole">Skedsmo videregående skole</option>
+            <option value="Ski videregående skole">Ski videregående skole</option>
+            <option value="St. Hallvard videregående skole">St. Hallvard videregående skole</option>
+            <option value="St. Olav videregående skole">St. Olav videregående skole</option>
+            <option value="Stabekk videregående skole">Stabekk videregående skole</option>
+            <option value="Strømmen videregående skole">Strømmen videregående skole</option>
+            <option value="Sørumsand videregående skole">Sørumsand videregående skole</option>
+            <option value="Valler videregående skole">Valler videregående skole</option>
+            <option value="Vestby videregående skole">Vestby videregående skole</option>
+            <option value="Ål vidaregåande skole">Ål vidaregåande skole</option>
+            <option value="Ås videregående skole">Ås videregående skole</option>
+            <option value="Åssiden videregående skole">Åssiden videregående skole</option>
+        </select>
+        <input type="text" id="phoneInput" placeholder="Telefonnummer"> 
+        <input type="text" id="addressInput" placeholder="Adresse">
+       <!-- Her er de forskjellige fargene som kan velges via radio inputen -->
+        <label>
+            Gull
+            <input type="radio" name="color" value="#FFD700">
+        </label>
+        <label>
+            Rosa
+            <input type="radio" name="color" value="#FF69B4">
+        </label>
+        <label>
+            Blå
+            <input type="radio" name="color" value="#6495ED">
+        </label>
+        <label>
+            Grønn
+            <input type="radio" name="color" value="#32CD32">
+        </label>
+        <label>
+            Oransje
+            <input type="radio" name="color" value="#FFA500">
+        </label>
+        <button type="submit">Generer Russekort</button>
+        <button type="button" id="changeImageButton">Bytt bilde</button>
+    </form>
+
+    <script>
+        //etter at informasjonen ble skrevet av brukeren klikkes knappen og kjøres funksjonen generateRussekort
+        document.getElementById("russekortForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            generateRussekort();
+        });
+//Når knappen trykkes så kjøres changeImage() funksjonen
+        document.getElementById("changeImageButton").addEventListener("click", function() {
+            changeImage();
+        });
+ //denne funksjonen oppdaterer russekortet med den informasjonen som ble skrevet av brukern
+        function generateRussekort() {
+            let name = document.getElementById("nameInput").value;
+            let school = document.getElementById("schoolSelect").value;
+            let phone = document.getElementById("phoneInput").value; // Hent telefonnummer fra input-felt
+            let address = document.getElementById("addressInput").value; // Hent adresse fra input-felt
+            let colorInputs = document.getElementsByName("color");
+            let color;
+
+            for (let i = 0; i < colorInputs.length; i++) {
+                if (colorInputs[i].checked) {
+                    color = colorInputs[i].value;
+                    break;
+                }
+            }
+
+            document.getElementById("name").innerText = name;//oppdaterer
+            document.getElementById("school").innerText = school;//Oppdaterer skolen
+            document.getElementById("phone").innerText = phone; // Oppdater telefonnummer
+            document.getElementById("address").innerText = address; // Oppdater adresse
+            document.getElementById("russekort").style.backgroundColor = color;//Oppdaterer fargen
+        }
+// bruker api for aa ha en random bilde på russekortet nå knappen trykkes
+        function changeImage() {
+            fetch('https://api.thecatapi.com/v1/images/search')
+            .then(response => response.json())
+            .then(data => {
+                let imageUrl = data[0].url;
+                document.getElementById("russekortImage").src = imageUrl;
+            })
+            .catch(error => {
+                console.error('Error fetching image:', error);
+            });
+        }
+    </script>
+</body>
+</html>
